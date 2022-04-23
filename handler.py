@@ -8,6 +8,9 @@ from api_preprocessing import ApiPreprocessing
 # import model
 regressor = pickle.load(open('deploy/random_forest_sales_prediction.pkl', 'rb'))
 
+# load dataset
+dataset = pd.read_csv('preprocessed_data/X_pred.csv')
+
 # instanciate flask
 app = Flask(__name__)
 
@@ -16,12 +19,8 @@ app = Flask(__name__)
 def predict():
   test_json = request.get_json()
 
-  # if there's data in the request, convert the request to a dataframe
-  if test_json:
-    if isinstance(test_json, dict): # unique value
-      df_raw = pd.DataFrame(test_json, index=[0])
-    else:
-      df_raw = pd.DataFrame(test_json, columns=test_json[0].keys())
+  # get the data requested
+  df_raw = dataset[(dataset['Year'] == int(test_json['Year'])) & (dataset['Month'] == int(test_json['Month']))]
 
   # instanciate data preparation
   pipeline = ApiPreprocessing()
@@ -33,7 +32,7 @@ def predict():
   pred = regressor.predict(df1)
 
   # create prediction column
-  df_raw['prediction'] = pred
+  df_raw['Prediction'] = pred
 
   # return dataframe
   return df_raw.to_json(orient='records')

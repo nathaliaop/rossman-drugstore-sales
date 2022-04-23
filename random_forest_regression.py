@@ -131,13 +131,6 @@ if __name__ == '__main__':
 
 pickle.dump(regressor, open('deploy/random_forest_sales_prediction.pkl', 'wb'), protocol=pickle.HIGHEST_PROTOCOL)
 
-
-# In[144]:
-
-
-display(X)
-
-
 # In[171]:
 
 
