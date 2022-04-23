@@ -14,7 +14,7 @@
   * 🚀 [Como executar](#-como-executar)
   * ❓  [Questão de negócio](#-questão-de-negócio)
   * 📝 [Desenvolvimento da solução](#-desenvolvimento-da-solução)
-  * 💰  [Resultados](#-resultados)
+  * 🔮  [Resultados](#-resultados)
   * ✅  [Próximos passos](#-próximos-passos)
   * 🦸 [Autora](#-autora)
 
@@ -66,7 +66,7 @@ Primeiramente, foi preciso precessar os dados. Os valores ausentes foram substit
 
 ---
 
-## Resultados
+## 🔮 Resultados
 Exemplo das predições de venda para os primeiros dias do mês de agosto de 2015:
 
 <img alt="Rossman Drugstore" title="Rossman Drugstore" src="./assets/prediction-august-2015.png" />
