@@ -1,0 +1,4 @@
+__pycache__/
+.ipynb_checkpoints/
+
+deploy/random_forest_sales_prediction.pkl
