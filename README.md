@@ -15,7 +15,7 @@
   * ❓  [Questão de negócio](#-questão-de-negócio)
   * 📝 [Desenvolvimento da solução](#-desenvolvimento-da-solução)
   * 🔮  [Resultados](#-resultados)
-  * ✅  [Próximos passos](#-próximos-passos)
+  * ✅  [Telegram Bot](#-telegram-bot)
   * 🦸 [Autora](#-autora)
 
 ---
@@ -67,12 +67,24 @@ Primeiramente, foi preciso precessar os dados. Os valores ausentes foram substit
 ---
 
 ## 🔮 Resultados
-Exemplo das predições de venda para os primeiros dias do mês de agosto de 2015:
+Exemplo das predições de venda para a terceira semana do mês de agosto de 2015:
 
-<img alt="Rossman Drugstore" title="Rossman Drugstore" src="./assets/prediction-august-2015.png" />
+<img alt="Rossman Drugstore" title="Rossman Drugstore" src="./assets/prediction-week-3.png" />
 
-## ✅ Próximos Passos
-O modelo do random forest já foi colocado em produção, então seria interessante desenvolver uma maneira do usuário fazer requisições à API por meio de alguma interface como um website ou por meio de alguma serviço intermediário como o Telegram ou o Discord.
+## ✅ Telegram Bot
+O Bot do Telegram [Rossman Drugstore Sales (@RossmanBot)](https://github.com/nathaliaop/rossman-telegram-bot) pode retornar as previsões calculadas para determinado semana com o comando no formato /predict (numero de 1 a 6):
+
+```bash
+1: Primeira semana de agosto
+2: Segunda semana de agosto
+3: Terceira seman de agosto
+4: Quarta semana de agosto
+5: Primeira semana de setembro
+6: Segunda semana de setembro
+
+# predict semana 3
+/predict 3
+```
 
 ---
 
